@@ -9,7 +9,11 @@ const sakib = {
 };
 
 const mashrafee = {
+
     playerName: "Mashrafe Mortaza",
+
+    playerName: "Mashrafee",
+
     imageUrl:
         "https://www.cricket.com.au/-/media/Players/Men/International/Bangladesh/Mashrafe-Mortaza-CWC19.ashx",
     ranking: 1,
@@ -74,7 +78,9 @@ const adreRussell = {
   
   
   
+
   const playerArray=[pollard, sakib,mashrafee, musfiqur,rubel,sunilNarine,nurulHassan, adreRussell,litonKumar]
+
   
   
   function displayPlayers(player) {
