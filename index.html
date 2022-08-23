@@ -11,7 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="mx-auto max-w-7xl bg-gray-200">
-    <header>
+    <header class="my-4">
         <!-- NavBar  -->
         <div class="navbar bg-base-100">
             <div class="flex-1">
@@ -62,7 +62,78 @@
            
           </div>
     </header>
-    <main>
+    <main class="my-4">
+        <div class="flex w-full">
+            <div class="grid  flex-grow card bg-base-300 rounded-box place-items-center">
+                    <div id="player-section" class="grid grid-cols-3 gap-4 p-10">
+                       
+                    </div>
+
+
+
+            </div>
+            <div class="divider "></div>
+            <div class="grid  flex-grow card bg-base-300 rounded-box place-items-center">
+                   <div class="flex flex-col" > 
+                <div class="bg-stone-100 rounded">
+                    <div class="overflow-x-auto p-5">
+                        <table class="table w-full">
+                          <!-- head -->
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th>Name</th>
+                              <th>PLAYING ROLE</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                              <th>1</th>
+                              <td>Cy Ganderton</td>
+                              <td>Quality Control Specialist</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+            <div class="my-12 bg-stone-100 p-10 rounded">
+                <h1 class="text-center text-2xl font-bold my-5">Budget</h1>
+                <div class="form-control">
+                   
+                    <label class="input-group">
+                      <span>Per Player</span>
+                      <input type="text" placeholder="amount" class="input rounded" />
+                    </label>
+                  </div>
+                  <div class="flex justify-center mt-4">
+                    <button class="btn btn-info ">Calculate</button>
+                  </div>
+                  <div class="my-5">
+                    <h1 class="text-center my-3 font-bold text-xl">Player Expense: $<span>5000</span> </h1>
+                    <div class="flex jutify-center flex-col">
+                        <label class="input-group">
+                            <span>Manager</span>
+                            <input type="text" placeholder="amount" class="input rounded  " />
+                          </label>
+                          <label class="input-group mt-5">
+                            <span>Coach</span>
+                            <input type="text" placeholder="amount" class="input rounded" />
+                          </label>
+                    </div>
+                  </div>
+                  <div class="flex justify-center mt-4">
+                    <button class="btn btn-info ">Calculate</button>
+                  </div>
+                  <h1 class="text-center my-6 font-bold text-xl">Total $<span>10000</span> </h1>
+
+            </div>
+            </div>
+
+
+
+            </div>
+          </div>
 
     </main>
 
