@@ -102,23 +102,25 @@
         >
           <div class="flex flex-col">
             <div class="bg-stone-100 rounded">
+                <p class="text-xl text-center my-5 font-bold">Selected Players<span id="total-selected-player" class="text-blue-500 hidden">0</span>
+                </p>
               <div class="overflow-x-auto p-5">
                 <table class="table w-full">
                   <!-- head -->
                   <thead>
                     <tr>
                       <th></th>
-                      <th>Name</th>
+                      <th>NAME</th>
                       <th>PLAYING ROLE</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <!-- row 1 -->
-                    <tr>
+                  <tbody id="players-cart">
+                    <!-- Player Selected Table-->
+                    <!-- <tr>
                       <th>1</th>
                       <td>Cy Ganderton</td>
                       <td>Quality Control Specialist</td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                 </table>
               </div>
@@ -174,6 +176,7 @@
     </main>
 
     <!-- Javascript files  -->
-    <script src="js/app.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/playerSelection.js"></script>
   </body>
 </html>

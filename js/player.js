@@ -74,7 +74,10 @@ var sunilNarine = {
       <p>${player.description}  </p>
       <p class="text-zinc-400">ICC Ranking: ${player.ranking}</p>
       <div class="card-actions">
-        <button class="btn btn-primary">Select</button>
+      
+      <button id="button" class="btn btn-primary" onclick="addToCart(this)" >Select</button>
+   
+      
       </div>
     </div>
   </div>
@@ -93,7 +96,5 @@ var sunilNarine = {
       }
   
    }
-  
-  
    displayAllArticles(playerArray)
   
