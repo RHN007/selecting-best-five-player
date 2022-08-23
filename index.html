@@ -1,144 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dhaka Dynamites Player Selection</title>
-    
+
     <!-- Using tailwindsCSS & Daisy UI  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="mx-auto max-w-7xl bg-gray-200">
+  </head>
+  <body class="mx-auto max-w-7xl bg-gray-200">
     <header class="my-4">
-        <!-- NavBar  -->
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-              <a class="btn btn-ghost normal-case text-xl">Dhaka Dynamites</a>
-            </div>
-            <div class="flex-none gap-2">
-              <div class="form-control">
-                <input type="text" placeholder="Search" class="input input-bordered" />
-              </div>
-              <div class="dropdown dropdown-end">
-                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                  <div class="w-10 rounded-full">
-                    <img src="https://placeimg.com/80/80/people" />
-                  </div>
-                </label>
-                <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                  <li>
-                    <a class="justify-between">
-                      Profile
-                      <span class="badge">New</span>
-                    </a>
-                  </li>
-                  <li><a>Settings</a></li>
-                  <li><a>Logout</a></li>
-                </ul>
-              </div>
-            </div>
+      <!-- NavBar  -->
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl text-blue-500 font-bold"
+            >Dhaka Dynamites Players Pool</a
+          >
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <input
+              type="text"
+              placeholder="Search"
+              class="input input-bordered"
+            />
           </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="https://placeimg.com/80/80/people" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-        <!-- carousel item  -->
-        <div class="carousel w-full">
-            <div id="slide1" class="carousel-item relative w-full">
-              <img src="https://dhakadynamites.com/images/banner/BD_Website_Banner.png" class="w-full" h />
-              
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" class="btn btn-circle">❮</a> 
-                <a href="#slide2" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide2" class="carousel-item relative w-full">
-              <img src="https://dhakadynamites.com/images/banner/home-banner-2019.jpg" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">❮</a> 
-                <a href="#slide3" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-          
-           
+      <!-- carousel item  -->
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img
+            src="https://dhakadynamites.com/images/banner/BD_Website_Banner.png"
+            class="w-full"
+            h
+          />
+
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
           </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img
+            src="https://dhakadynamites.com/images/banner/home-banner-2019.jpg"
+            class="w-full"
+          />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
     </header>
+    <!-- End of Header Section  -->
     <main class="my-4">
-        <div class="flex w-full">
-            <div class="grid  flex-grow card bg-base-300 rounded-box place-items-center">
-                    <div id="player-section" class="grid grid-cols-3 gap-4 p-10">
-                       
-                    </div>
+      <div class="flex w-full">
+        <div
+          class="grid flex-grow card bg-base-300 rounded-box place-items-center"
+        >
+        <!-- Player Selection  -->
+          <div id="player-section" class="grid grid-cols-3 gap-4 p-10"></div>
+        </div>
 
 
-
+        <!-- Other Section  -->
+        <div class="divider"></div>
+        <div
+          class="grid flex-grow card bg-base-300 rounded-box place-items-center"
+        >
+          <div class="flex flex-col">
+            <div class="bg-stone-100 rounded">
+              <div class="overflow-x-auto p-5">
+                <table class="table w-full">
+                  <!-- head -->
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Name</th>
+                      <th>PLAYING ROLE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                      <th>1</th>
+                      <td>Cy Ganderton</td>
+                      <td>Quality Control Specialist</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="divider "></div>
-            <div class="grid  flex-grow card bg-base-300 rounded-box place-items-center">
-                   <div class="flex flex-col" > 
-                <div class="bg-stone-100 rounded">
-                    <div class="overflow-x-auto p-5">
-                        <table class="table w-full">
-                          <!-- head -->
-                          <thead>
-                            <tr>
-                              <th></th>
-                              <th>Name</th>
-                              <th>PLAYING ROLE</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <!-- row 1 -->
-                            <tr>
-                              <th>1</th>
-                              <td>Cy Ganderton</td>
-                              <td>Quality Control Specialist</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                </div>
             <div class="my-12 bg-stone-100 p-10 rounded">
-                <h1 class="text-center text-2xl font-bold my-5">Budget</h1>
-                <div class="form-control">
-                   
-                    <label class="input-group">
-                      <span>Per Player</span>
-                      <input type="text" placeholder="amount" class="input rounded" />
-                    </label>
-                  </div>
-                  <div class="flex justify-center mt-4">
-                    <button class="btn btn-info ">Calculate</button>
-                  </div>
-                  <div class="my-5">
-                    <h1 class="text-center my-3 font-bold text-xl">Player Expense: $<span>5000</span> </h1>
-                    <div class="flex jutify-center flex-col">
-                        <label class="input-group">
-                            <span>Manager</span>
-                            <input type="text" placeholder="amount" class="input rounded  " />
-                          </label>
-                          <label class="input-group mt-5">
-                            <span>Coach</span>
-                            <input type="text" placeholder="amount" class="input rounded" />
-                          </label>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-4">
-                    <button class="btn btn-info ">Calculate</button>
-                  </div>
-                  <h1 class="text-center my-6 font-bold text-xl">Total $<span>10000</span> </h1>
-
-            </div>
-            </div>
-
-
-
+              <h1 class="text-center text-2xl font-bold my-5">Budget</h1>
+              <div class="form-control">
+                <label class="input-group">
+                  <span>Per Player</span>
+                  <input
+                    type="text"
+                    placeholder="amount"
+                    class="input rounded"
+                  />
+                </label>
+              </div>
+              <div class="flex justify-center mt-4">
+                <button class="btn btn-info">Calculate</button>
+              </div>
+              <div class="my-5">
+                <h1 class="text-center my-3 font-bold text-xl">
+                  Player Expense: $<span>5000</span>
+                </h1>
+                <div class="flex jutify-center flex-col">
+                  <label class="input-group">
+                    <span>Manager</span>
+                    <input
+                      type="text"
+                      placeholder="amount"
+                      class="input rounded"
+                    />
+                  </label>
+                  <label class="input-group mt-5">
+                    <span>Coach</span>
+                    <input
+                      type="text"
+                      placeholder="amount"
+                      class="input rounded"
+                    />
+                  </label>
+                </div>
+              </div>
+              <div class="flex justify-center mt-4">
+                <button class="btn btn-info">Calculate</button>
+              </div>
+              <h1 class="text-center my-6 font-bold text-xl">
+                Total $<span>10000</span>
+              </h1>
             </div>
           </div>
-
+        </div>
+      </div>
     </main>
 
-<!-- Javascript files  -->
-<script src="js/app.js"></script>
-
-</body>
+    <!-- Javascript files  -->
+    <script src="js/app.js"></script>
+  </body>
 </html>
