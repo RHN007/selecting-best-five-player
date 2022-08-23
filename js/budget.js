@@ -1,4 +1,4 @@
-// Function for Input Field ; 
+/*************** Function :input Field :  *********************/
 
 function getInputField(inputID){
     const inputField= document.getElementById(inputID); 
@@ -13,7 +13,8 @@ function getInputField(inputID){
     return inputAmount
 }
 
-// Function for Text Field 
+
+/*************** Function :Text Field :  *********************/
 
 function getTextFieldData(inputTextId){
     const inputTextData = document.getElementById(inputTextId); 
@@ -22,31 +23,40 @@ function getTextFieldData(inputTextId){
 }
 
 
-//Function Display Data Files : 
+/*************** Function :Display Data Files :  *********************/
 function displayData (inputId , value){
     const displayAmount = document.getElementById(inputId); 
     displayAmount.innerText = value;
     return
 }
 
+/*************** Function :total Expense *********************/
+
 function totalExpense(){
     const perPlayerBudgetAmount = getInputField('per-player-budget')
     const numberOfPlayerSelected = getTextFieldData('total-selected-player') 
-    const totalPlayerExpense = numberOfPlayerSelected  * perPlayerBudgetAmount; 
-    return totalPlayerExpense; 
+    if(numberOfPlayerSelected > 5){
+        const totalPlayerExpense = 5  * perPlayerBudgetAmount; 
+        return totalPlayerExpense
+    }else{
+        return totalPlayerExpense = numberOfPlayerSelected  * perPlayerBudgetAmount; 
+    }
 }
 
 
-
-
-// Calculate Button 
+/**********************
+  Total Player Expense
+**********************/
 document.getElementById('calculate').addEventListener('click', function(){
     const totalPlayerExpense = totalExpense()
     displayData('total-player-expense', totalPlayerExpense); 
 })
 
 
-//total calculate Button : 
+
+/********************
+     Grand total
+*********************/
 
 document.getElementById('calculate-total').addEventListener('click', function(){
     const managerBudgetAmount = getInputField('manager'); 

@@ -9,9 +9,9 @@
      
        const totalSelectedPlayers = document.getElementById("total-selected-player");
        totalSelectedPlayers.innerText = cart.length;
-        const playerValue = parseFloat(totalSelectedPlayers.innerText)-1; 
+        
     //    Error Handling 
-        if(playerValue >= 5){
+        if(cart.length >= 6){
             alert("You Cannot Select More than Five player")
             return
         }
@@ -20,7 +20,7 @@
        cartContainer.textContent = '';
    
        for(let i = 0; i < cart.length; i++)
-       
+        
        
        {
 
@@ -31,8 +31,10 @@
            <td>${cart[i].playerRole }</td>
            `;
            cartContainer.appendChild(tr);
+           
           
        }
+       
       
    }
    
