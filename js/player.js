@@ -75,7 +75,7 @@ var sunilNarine = {
       <p class="text-zinc-400">ICC Ranking: ${player.ranking}</p>
       <div class="card-actions">
       
-      <button id="button" class="btn btn-primary" onclick="addToCart(this)" >Select</button>
+      <button  class="btn btn-primary"  onclick="addToCart(this)"  >Select</button>
    
       
       </div>
