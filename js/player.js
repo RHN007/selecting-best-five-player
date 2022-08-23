@@ -1,30 +1,30 @@
 //Selcting Players : 
-var sakib = {
+const sakib = {
     playerName: "Shakib Al Hasan",
     imageUrl:
-        "https://images.news18.com/ibnlive/uploads/2021/08/1628597181_shakib-al-hasan.jpg",
+        "https://dhakadynamites.com/images/profile/Shakib-Al-Hasan_2019-01-07_968.jpg",
     ranking: 1,
     description:
         "All Rounder",
 };
 
-var mashrafee = {
-    playerName: "Mashrafee",
+const mashrafee = {
+    playerName: "Mashrafe Mortaza",
     imageUrl:
         "https://www.cricket.com.au/-/media/Players/Men/International/Bangladesh/Mashrafe-Mortaza-CWC19.ashx",
     ranking: 1,
     description:
-        "Medium Fast Boller",
+        "Medium Fast Bowler",
 };
-var pollard = {
+const pollard = {
     playerName: "Kiran Pollard",
     imageUrl:
-        "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/320100/320107.png",
+        "https://dhakadynamites.com/images/profile/Kiron-Pollard_2019-01-07_524.jpg",
     ranking: 5,
     description:
         "All Rounder",
 };
-var musfiqur = {
+const musfiqur = {
     playerName: "Musfiqur Rahman",
     imageUrl:
         "https://m.cricbuzz.com/a/img/v1/192x192/i1/c170916/mushfiqur-rahim.jpg",
@@ -32,31 +32,49 @@ var musfiqur = {
     description:
         "Wicket Keeper Batsman",
 };
-var rubel = {
+const rubel = {
     playerName: "Ruble Hossain",
     imageUrl:
-        "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/291600/291610.jpg",
+        "https://dhakadynamites.com/images/profile/Rubel-Hossain_2019-01-07_267.jpg",
     ranking: 12,
     description:
-        "Boller",
+        "Fast Bowler",
 };
-var sunilNarine = {
+const sunilNarine = {
     playerName: "Sunil Narine",
     imageUrl:
-        "https://st3.cricketcountry.com/wp-content/uploads/cricket/20140522042106.jpeg",
+        "https://dhakadynamites.com/images/profile/Sunil-Narine_2019-01-07_457.jpg",
     ranking: 3,
     description:
         "All Rounder",
 }
 
+const litonKumar={
+    playerName:'Liton Kumar Das', 
+    imageUrl:'https://www.cricket.com.au/-/media/Players/Men/International/Bangladesh/Liton-Das-CWC19.ashx', 
+    ranking: 5, 
+    description:'Batsman'
+}
 
-        
+const nurulHassan={
+    playerName:'Nurul Hasan', 
+    imageUrl:'http://dhakadynamites.com/images/profile/Nurul-Hasan_2019-01-07_174.jpg', 
+    ranking: 23, 
+    description:'Batsman'
+}
+
+const adreRussell = {
+    playerName: "Andrew Russel", 
+    imageUrl: "https://dhakadynamites.com/images/profile/AD-Russell_2019-01-07_946.jpg",
+    ranking: 12, 
+    description: "All Rounder"
+}
   // farePerKilo -> per kilometer cost for hiring the vehicle
   
   
   
   
-  const playerArray=[mashrafee,pollard, sakib, musfiqur,rubel,sunilNarine]
+  const playerArray=[pollard, sakib,mashrafee, musfiqur,rubel,sunilNarine,nurulHassan, adreRussell,litonKumar]
   
   
   function displayPlayers(player) {
@@ -75,7 +93,7 @@ var sunilNarine = {
       <p class="text-zinc-400">ICC Ranking: ${player.ranking}</p>
       <div class="card-actions">
       
-      <button id="button" class="btn btn-primary" onclick="addToCart(this)" >Select</button>
+      <button  class="btn btn-primary"  onclick="addToCart(this)"  >Select</button>
    
       
       </div>
@@ -88,6 +106,7 @@ var sunilNarine = {
   
    
    function displayAllArticles(arr) {
+     
      
       for (let i = 0; i < arr.length; i++) {
           const element = arr[i];

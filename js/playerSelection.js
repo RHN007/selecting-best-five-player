@@ -4,14 +4,14 @@
    const cart = [];
    // products-cart
    
-   function displayProduct()
+   function displayPlayers()
    {
-     let totalPlayer = 0 ; 
+     
        const totalSelectedPlayers = document.getElementById("total-selected-player");
        totalSelectedPlayers.innerText = cart.length;
-        const playerValue = parseFloat(totalSelectedPlayers.innerText)-1; 
+        
     //    Error Handling 
-        if(playerValue >= 5){
+        if(cart.length >= 6){
             alert("You Cannot Select More than Five player")
             return
         }
@@ -20,6 +20,8 @@
        cartContainer.textContent = '';
    
        for(let i = 0; i < cart.length; i++)
+        
+       
        {
 
           const tr = document.createElement("tr");
@@ -29,23 +31,26 @@
            <td>${cart[i].playerRole }</td>
            `;
            cartContainer.appendChild(tr);
+           
+          
        }
+       
+      
    }
+   
    
    function addToCart(element) {
        const playerName = element.parentNode.parentNode.children[0].innerText;
        const playerRole = element.parentNode.parentNode.children[1].innerText;
-   
        const pd = {
         playerName: playerName,
-           playerRole: playerRole
+        playerRole: playerRole
        }
-   
        cart.push(pd);
-       
-       displayProduct();
-   }
+       displayPlayers();
+       element.disabled = true; 
+ 
+    }
 
-
-   //Button Disabled 
+  
  

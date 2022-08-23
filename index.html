@@ -86,12 +86,12 @@
     </header>
     <!-- End of Header Section  -->
     <main class="my-4">
-      <div class="flex w-full">
+      <div class=" flex flex-col md:flex-row  justify-center w-full">
         <div
           class="grid flex-grow card bg-base-300 rounded-box place-items-center"
         >
         <!-- Player Selection  -->
-          <div id="player-section" class="grid grid-cols-3 gap-4 p-10"></div>
+          <div id="player-section" class="grid grid-cols-1 md:grid-cols-3 gap-4 p-10"></div>
         </div>
 
 
@@ -102,7 +102,7 @@
         >
           <div class="flex flex-col">
             <div class="bg-stone-100 rounded">
-                <p class="text-xl text-center my-5 font-bold">Selected Players<span id="total-selected-player" class="text-blue-500 hidden">0</span>
+                <p class="text-xl text-center my-5 font-bold">Selected Players <br> <span id="total-selected-player" class="text-blue-500 hidden">0</span>
                 </p>
               <div class="overflow-x-auto p-5">
                 <table class="table w-full">
@@ -115,12 +115,7 @@
                     </tr>
                   </thead>
                   <tbody id="players-cart">
-                    <!-- Player Selected Table-->
-                    <!-- <tr>
-                      <th>1</th>
-                      <td>Cy Ganderton</td>
-                      <td>Quality Control Specialist</td>
-                    </tr> -->
+                   
                   </tbody>
                 </table>
               </div>
@@ -130,7 +125,7 @@
               <div class="form-control">
                 <label class="input-group">
                   <span>Per Player</span>
-                  <input
+                  <input id="per-player-budget"
                     type="text"
                     placeholder="amount"
                     class="input rounded"
@@ -138,24 +133,26 @@
                 </label>
               </div>
               <div class="flex justify-center mt-4">
-                <button class="btn btn-info">Calculate</button>
+                <button id="calculate" class="btn btn-info">Calculate</button>
               </div>
               <div class="my-5">
-                <h1 class="text-center my-3 font-bold text-xl">
-                  Player Expense: $<span>5000</span>
+                <h1 class="text-center my-3 font-bold text-xl" >
+                  Player Expense: $<span id="total-player-expense">00</span>
                 </h1>
                 <div class="flex jutify-center flex-col">
                   <label class="input-group">
-                    <span>Manager</span>
+                    <span >Manager</span>
                     <input
+                    id="manager"
                       type="text"
                       placeholder="amount"
                       class="input rounded"
                     />
                   </label>
                   <label class="input-group mt-5">
-                    <span>Coach</span>
+                    <span >Coach</span>
                     <input
+                    id="coach"
                       type="text"
                       placeholder="amount"
                       class="input rounded"
@@ -164,11 +161,14 @@
                 </div>
               </div>
               <div class="flex justify-center mt-4">
-                <button class="btn btn-info">Calculate</button>
+                <button id="calculate-total" class="btn btn-info">Calculate Total</button>
               </div>
-              <h1 class="text-center my-6 font-bold text-xl">
-                Total $<span>10000</span>
-              </h1>
+              <div class="flex my-6 font-bold justify-around">
+                <h1 class="text-center  text-xl">
+                  Total Expense 
+                </h1>
+                <p class="text-xl">$<span id="total">00</span></p>
+              </div>
             </div>
           </div>
         </div>
@@ -178,5 +178,6 @@
     <!-- Javascript files  -->
     <script src="js/player.js"></script>
     <script src="js/playerSelection.js"></script>
+    <script src="js/budget.js"></script>
   </body>
 </html>
